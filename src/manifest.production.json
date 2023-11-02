@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "GAC",
+    "description": "公信认证",
+    "version": "0.1.0",
+    "options_page": "options.html",
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "assets/img/logo-gac.png"
+    },
+    "background": {
+        "service_worker": "hot-reload.js"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'",
+        "web_accessible_resources": "fonts/*"
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://certgac.frchain.net/certificateManagement/generated"
+        ],
+        "css": [
+            "css/frchain.css"
+        ],
+        "js": [
+            "js/frchain.js"
+        ],
+        "run_at": "document_end"
+    }]
+}
