@@ -10,7 +10,7 @@ npm install
 ```
 npm run serve
 or
-npm run build-watch
+npm run watch
 ```
 
 ### 生产环境打包

@@ -6,7 +6,7 @@
     "serve": "npm run build-watch",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-watch": "vue-cli-service build-watch",
+    "watch": "vue-cli-service build-watch",
     "analyze": "npm run build --report"
   },
   "dependencies": {
