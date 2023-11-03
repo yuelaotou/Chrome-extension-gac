@@ -1,23 +1,8 @@
 <template>
-  <el-card class="box-card">
-    <div
-      slot="header"
-      class="clearfix"
-    >
-      <span>卡片名称</span>
-      <el-button
-        style="float: right; padding: 3px 0"
-        type="text"
-      >操作按钮</el-button>
-    </div>
-    <div
-      v-for="o in 4"
-      :key="o"
-      class="text item"
-    >
-      {{'列表内容 ' + o }}
-    </div>
-  </el-card>
+  <div>
+    0.1.0版本，增加了批量下载证书功能
+    https://certgac.frchain.net/certificateManagement/generated
+  </div>
 </template>
 
 <script>
