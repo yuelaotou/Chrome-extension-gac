@@ -31,6 +31,18 @@ manifest.push(
         to: path.resolve("dist/assets")
     }
 )
+manifest.push(
+    {
+        from: path.resolve("src/cert.pem"),
+        to: path.resolve("dist/cert.pem")
+    }
+)
+manifest.push(
+    {
+        from: path.resolve("src/key.pem"),
+        to: path.resolve("dist/key.pem")
+    }
+)
 
 const plugins = [
     CopyWebpackPlugin(manifest)
