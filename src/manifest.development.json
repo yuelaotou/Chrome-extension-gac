@@ -4,6 +4,9 @@
   "description": "公信认证",
   "version": "0.1.0",
   "options_page": "options.html",
+  "background": {
+    "service_worker": "js/background.js"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": "assets/img/logo-gac.png"
@@ -13,18 +16,6 @@
     "web_accessible_resources": "fonts/*"
   },
   "content_scripts": [
-    {
-      "matches": [
-        "https://www.baidu.com/"
-      ],
-      "css": [
-        "css/content.css"
-      ],
-      "js": [
-        "js/content.js"
-      ],
-      "run_at": "document_end"
-    },
     {
       "matches": [
         "https://certgac.frchain.net/certificateManagement/generated"
@@ -37,5 +28,12 @@
       ],
       "run_at": "document_idle"
     }
+  ],
+  "host_permissions": [
+    "https://certgac.frchain.net/certificateManagement/generated"
+  ],
+  "permissions": [
+    "storage",
+    "windows"
   ]
 }
